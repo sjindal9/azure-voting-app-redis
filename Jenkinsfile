@@ -34,7 +34,7 @@ pipeline {
       }
       stage("Stope the App"){
          step{
-            echo "stoping the app...""
+            echo "stoping the app..."
             sh 'docker compose down"
          }
       }
