@@ -19,12 +19,12 @@ pipeline {
             """
          }
       }
-      stage("Start the App"){
+      stage('Start the App'){
          steps{
             echo "Starting the app...."
          }
          post{
-            sucess{
+            success{
                echo "Application started sucessfully"
             }
             failure{
@@ -33,7 +33,7 @@ pipeline {
          }
       }
       stage("Stope the App"){
-         step{
+         steps{
             echo "stoping the app..."
             sh 'docker compose down'
          }
