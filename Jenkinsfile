@@ -20,9 +20,9 @@ pipeline {
          }
       }
       stage('Start the App'){
+       when{branch 'master'}
          steps{
             echo "Starting the app...."
-            sh 'docker container run -d jenkins-pipeline'
          }
          post{
             success{
