@@ -22,7 +22,7 @@ pipeline {
       stage('Start the App'){
        when{branch 'master'}
          steps{
-            echo "Starting the app..."
+            echo "Starting the app....."
          }
          post{
             success{
