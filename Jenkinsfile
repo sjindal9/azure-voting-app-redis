@@ -22,6 +22,7 @@ pipeline {
       stage('Start the App'){
          steps{
             echo "Starting the app...."
+            sh 'docker container run -d jenkins-pipeline'
          }
          post{
             success{
@@ -35,7 +36,8 @@ pipeline {
       stage("Stope the App"){
          steps{
             echo "stoping the app..."
-            sh 'docker compose down'
+            //sh 'docker compose down'
+            sh 'docker container stop jenkins-pipeline'
          }
       }
    }
