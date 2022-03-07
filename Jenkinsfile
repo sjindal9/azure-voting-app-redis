@@ -35,7 +35,7 @@ pipeline {
       }
       stage("Stope the App"){
          steps{
-            echo "stoping the app..."
+            echo "stoping the app....."
             //sh 'docker compose down'
             sh 'docker container stop jenkins-pipeline'
          }
